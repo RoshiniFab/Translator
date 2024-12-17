@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Translator</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        button{
+            width:100px;
+            margin-top: 10px;
+            margin-left: 50%;
+        }
+        input{
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+   
+        <form>
+            <label for="">Name</label>
+            <input type="text" placeholder="Enter your name">
+            <label for="">Number</label>
+            <input type="number" placeholder="Enter your number">
+            <label for="">Email</label>
+            <input type="email" placeholder="Enter your email">
+            <button><b>Submit</b></button>
+        </form>
+  
+    </div>
+    <div id="translator"></div>
+    <script src="https:translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function googleTranslateElementInit(){
+            new google.translate.TranslateElement({pagelanguage:'en'},'translator');
+        }
+    </script>
+</body>
+</html>
